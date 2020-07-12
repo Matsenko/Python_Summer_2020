@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title>Novel about plague</title>
+  <link rel="stylesheet" href="{{url_for('static',filename='css/css_game.css')}}">
+  <link rel="shortcut icon" href="https://b1.m24.ru/c/629244.900xp.jpg" type="image/jpg">
+  <link href="https://fonts.googleapis.com/css2?family=Yellowtail&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+  <header>
+    <a href="{{ url_for('home') }}">Home</a>
+    <a id="game">To start a game</a>
+  </header>
+  <img src="https://www.historytoday.com/sites/default/files/articles/plague.jpg" id="plague" alt="">
+  <div class="novel_text">
+  </div>
+  <div id="line"></div>
+  <footer>
+    <ul>
+      <li>Produced by Matsenko Volodimyr & Gurin Ilya</li>
+    </ul>
+  </footer>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script type="text/javascript">
+    function scroll() {
+      $('html, body').animate({
+        scrollTop: $(".novel_text").offset().top
+      }, 4000);
+    }
+    var delay = 5000
+    $('#game').click(function () {
+      a = true;
+      $('#line').attr('style', 'display:none;')
+      alert("Game was started");
+      $("#plague").hide("slow");
+      $('#game').hide("slow");
+      $('#plague').attr('src', 'https://aif-s3.aif.ru/images/013/359/8492c0303b1ae808720d363be3142126.jpg');
+      $('#plague').show("slow");
+      $('#line').show("slow");
+      $('.novel_text').text('Imagine that you were born many years ago in England.');
+      scroll();
+      setTimeout(() => {
+        $("#plague").hide("slow");
+        $('#plague').attr('src', 'https://cdn.discordapp.com/attachments/728183481636749352/729658549722152990/1.jpg');
+        $("#plague").show("slow");
+        $('.novel_text').hide("slow");
+        $('.novel_text').text('When you grew up, you became a doctor.');
+        scroll();
+
+      }, delay);
+      setTimeout(() => {
+        $('.novel_text').hide("fast");
+        $('.novel_text').text('You have been working as a doctor for 5 years. During this time you have earned a great reputation because you have been treated very well.');
+        $('.novel_text').show("fast");
+        scroll();
+
+      }, delay += 5000);
+      setTimeout(() => {
+        var a = prompt("Suddenly, a plague broke out in England. You are offered to treat this disease for a good amount of money. (Your actions: 1-work, 2-do not work)");
+
+        setTimeout(() => {
+          if (a == "1") {
+            $('.novel_text').hide("fast");
+            $('.novel_text').text('You have chosen to work.');
+            $('.novel_text').show("fast");
+
+            scroll();
+            setTimeout(() => {
+              var a = prompt("You are offered to work with colleagues to make it easier. (Your actions: 1-work yourself, 2-work with colleagues.");
+              setTimeout(() => {
+                if (a == "1") {
+                  $('.novel_text').hide("fast");
+                  $('.novel_text').text('You will work yourself ...');
+                  $('.novel_text').show("fast");
+                  scroll();
+
+                  setTimeout(() => {
+                    a = prompt("You have a choice to work in a city (where the disease is more) or to work in a small town (where the disease is less). (Your actions: 1-city, 2-town)");
+                    setTimeout(() => {
+                      if (a == "1") {
+                        $('.novel_text').hide("fast");
+                        $('.novel_text').text('You will work in the city.');
+                        $('.novel_text').show("fast");
+                        scroll();
+                        setTimeout(() => {
+                          $('.novel_text').hide("fast");
+                          $('.novel_text').text('You go through empty narrow streets to the first patient ...');
+                          $('.novel_text').show("fast");
+                          scroll();
+
+                          setTimeout(() => {
+                            $('.novel_text').hide("fast");
+                            $('.novel_text').text('You are viewing it ...');
+                            $('.novel_text').show("fast");
+                            scroll();
+
+
+                            setTimeout(() => {
+                              $('.novel_text').hide("fast");
+                              $('.novel_text').text('The patient has the first signs of plague: chills and fever up to 39.5-40 ° C, severe headache, lethargy, dizziness, muscle pain, swollen face, red eyes, facial features, cyanosis, dark circles under the eyes, an expression of suffering and horror, the tongue is swollen, dry, with cracks, covered with a thick layer of white plaque, increased in size.');
+                              $('.novel_text').show("fast");
+                              scroll();
+
+
+
+                              setTimeout(() => {
+                                a = prompt("Give the patient herbs to drink or tell him to drink plenty of water. (Your actions: 1-give herbs, 2-advise to drink plenty of water)");
+                                setTimeout(() => {
+                                  if (a == "1") {
+                                    $('.novel_text').hide("fast");
+                                    $('.novel_text').text('You gave herbs and the patient went to recuperate ...');
+                                    $('.novel_text').show("fast");
+                                    scroll();
+
+
+
+                                    setTimeout(() => {
+                                      a = prompt("Later you are offered to go to a seriously ill person, it is very dangerous because there is a risk of getting sick. (Your actions: 1-go, 2-do not go)");
+                                      setTimeout(() => {
+                                        if (a == "1") {
+                                          $('.novel_text').hide("fast");
+                                          $('.novel_text').text('You went to the patient, gave him instructions and medicine, but it didn`t help him and he died in 2 days ...');
+                                          $('.novel_text').show("fast");
+                                          scroll();
+
+
+
+
+                                          setTimeout(() => {
+                                            a = prompt("Eventually you find yourself with the plague (probably from a patient who recently died) you have medication and you know how to be treated, but the question is whether to go further to help people or stay at home? (Your actions: 1-continue working, 2 -treated at home and not working)");
+                                            setTimeout(() => {
+                                              if (a == "1") {
+                                                $('.novel_text').hide("fast");
+                                                $('.novel_text').text('You choose to work further ...');
+                                                $('.novel_text').show("fast");
+                                                scroll();
+
+                                                setTimeout(() => {
+                                                  $('.novel_text').hide("fast");
+                                                  $('.novel_text').text('The next day you go to the next patient. In the middle of the road you start to feel dizzy and you faint ....');
+                                                  $('.novel_text').show("fast");
+                                                  scroll();
+
+                                                }, 2000);
+
+
+                                                setTimeout(() => {
+                                                  $('.novel_text').hide("fast");
+                                                  $('#plague').hide('fast');
+                                                  $('#plague').attr('src', 'https://cdn.discordapp.com/attachments/728183481636749352/729658503764901898/300px-Arnold_Bocklin_-_Die_Pest.jpg');
+                                                  $('#plague').show('fast');
+                                                  $('.novel_text').text('The streets are empty and there is no one who could help you ...');
+                                                  $('.novel_text').show("fast");
+                                                  scroll();
+
+                                                }, 3000);
+
+
+                                                setTimeout(() => {
+                                                  $('#plague').hide('fast');
+                                                  $('#plague').attr('src', 'https://media.discordapp.net/attachments/728183481636749352/729658511205597296/1502949739.jpg');
+                                                  $('#plague').show('fast');
+                                                  $('.novel_text').hide("fast");
+
+                                                  $('.novel_text').text('You are dying a hard and horrible death .....');
+                                                  $('.novel_text').show("fast");
+                                                  scroll();
+
+                                                }, 4000);
+
+
+                                                setTimeout(() => {
+                                                  alert("Game over!");
+
+                                                }, 5000);
+
+
+
+
+                                              }
+                                              else if (a == "2") {
+                                                $('.novel_text').hide("fast");
+                                                $('.novel_text').text('You stay at home and are treated ...');
+                                                $('.novel_text').show("fast");
+                                                scroll();
+
+                                                setTimeout(() => {
+                                                  $('#plague').hide('fast');
+                                                  $('#plague').attr('src', 'https://flibusta.site/i/68/559268/i_082.jpg');
+                                                  $('#plague').show('fast');
+                                                  $('.novel_text').hide("fast");
+                                                  $('.novel_text').text('You stay at home until the end of the epidemic and die of old age.');
+                                                  $('.novel_text').show("fast");
+                                                  scroll();
+
+                                                }, 2000);
+
+                                                setTimeout(() => {
+                                                  alert("Game over!")
+
+                                                }, 5000);
+
+
+                                              }
+
+                                            }, 2000);
+
+
+                                          }, 5000);
+
+
+
+
+
+
+                                        }
+                                        else if (a == "2") {
+                                          $('.novel_text').hide("fast");
+                                          $('#plague').hide('fast');
+                                          $('#plague').attr('src', 'https://media.discordapp.net/attachments/728183481636749352/729658511205597296/1502949739.jpg');
+                                          $('#plague').show('fast');
+                                          $('.novel_text').text('You did not go to the patient and he died in 2 days ...');
+                                          $('.novel_text').show("fast");
+                                          scroll();
+                                          setTimeout(() => {
+                                            $('.novel_text').hide("fast");
+                                            $('.novel_text').text('The woman of the deceased was angry with you and killed ....');
+                                            $('#plague').hide('fast');
+                                            $('#plague').attr('src', 'https://innerlivesblog.files.wordpress.com/2017/08/treason_1.jpg');
+                                            $('#plague').show('fast');
+                                            $('.novel_text').show("fast");
+                                            scroll();
+                                            setTimeout(() => {
+                                              alert("Game over!");
+                                            }, 2000);
+
+                                          }, 2000);
+
+                                        }
+
+                                      }, 2000);
+
+
+                                    }, 5000);
+
+
+
+
+
+
+
+                                  }
+                                  else if (a == "2") {
+                                    $('.novel_text').hide("fast");
+                                    $('.novel_text').text('You told him to drink a lot of water but later he dies.');
+                                    $('.novel_text').show("fast");
+                                    scroll();
+
+                                    setTimeout(() => {
+                                      $('.novel_text').hide("fast");
+                                      $('.novel_text').text('The woman of the deceased was angry with you and killed ....');
+                                      $('#plague').hide('fast');
+                                      $('#plague').attr('src', 'https://innerlivesblog.files.wordpress.com/2017/08/treason_1.jpg');
+                                      $('#plague').show('fast');
+                                      $('.novel_text').show("fast");
+                                      scroll();
+                                      setTimeout(() => {
+                                        alert("Game over!");
+                                      }, 2000);
+
+                                    }, 2000);
+
+                                  }
+
+                                }, 2000);
+
+                              }, 5000);
+
+
+                            }, 5000);
+
+
+                          }, 5000);
+
+                        }, 5000);
+
+
+
+
+
+                      }
+                      else if (a == "2") {
+                        $('.novel_text').hide("fast");
+                        $('.novel_text').text('You will work in the town.');
+                        $('.novel_text').show("fast");
+                        scroll();
+
+
+
+                        setTimeout(() => {
+                          $('.novel_text').hide("fast");
+                          $('.novel_text').text('You go through empty narrow streets to the first patient ...');
+                          $('.novel_text').show("fast");
+                          scroll();
+
+                        }, 2000);
+                        setTimeout(() => {
+                          $('.novel_text').hide("fast");
+                          $('.novel_text').text('You are viewing it ...');
+                          $('.novel_text').show("fast");
+                          scroll();
+
+                        }, 3000);
+
+
+                        setTimeout(() => {
+                          $("#plague").hide("fast");
+                          $("#plague").attr('src', "https://flibusta.site/i/68/559268/i_082.jpg");
+                          $("#plague").show("fast");
+                          $('.novel_text').hide("fast");
+                          $('.novel_text').text('Everything went well, soon the patient recovered and you lived to a ripe old age in this town and breathed then died ...');
+                          $('.novel_text').show("fast");
+                          scroll();
+
+                        }, 4000);
+
+                        setTimeout(() => {
+                          alert("Game over");
+
+                        }, 5000);
+
+
+
+                      }
+
+                    }, 2000);
+
+
+                  }, 5000);
+
+
+
+
+
+
+
+
+
+
+                }
+                else if (a == "2") {
+                  $('.novel_text').hide("fast");
+                  $('.novel_text').text('You will work with colleagues.');
+                  $('.novel_text').show("fast");
+                  scroll();
+
+                  setTimeout(() => {
+                    $('.novel_text').hide("fast");
+                    $('.novel_text').text('We examined all and were all healthy.');
+                    $('.novel_text').show("fast");
+                    scroll();
+
+                  }, 2000);
+                  setTimeout(() => {
+                    $('.novel_text').hide("fast");
+                    $("#plague").hide("fast");
+                    $("#plague").attr('src', "https://flibusta.site/i/68/559268/i_082.jpg");
+                    $("#plague").show("fast");
+                    $('.novel_text').text('We survived the epidemic and we died in old age ...');
+                    $('.novel_text').show("fast");
+                    scroll();
+                    setTimeout(() => {
+                      alert("Game over!");
+                    }, 2000);
+
+                  }, 5000);
+
+
+
+                }
+
+              }, 2000);
+
+
+            }, 5000);
+
+
+          }
+          else if (a == "2") {
+            $('.novel_text').hide("fast");
+            $('.novel_text').text('You have given up this job.');
+            $('.novel_text').show("fast");
+            scroll();
+            setTimeout(() => {
+              $('.novel_text').hide("fast");
+              $("#plague").hide("fast");
+              $("#plague").attr('src', "https://flibusta.site/i/68/559268/i_082.jpg");
+              $("#plague").show("fast");
+              $('.novel_text').text('You survived the epidemic and died in old age ...');
+              $('.novel_text').show("fast");
+              scroll();
+              setTimeout(() => {
+                alert("Game over!");
+              }, 2000);
+
+            }, 5000);
+
+          }
+
+        }, 5000);
+      }, delay += 5000);
+
+
+    });
+  </script>
+</body>
+
+</html>
